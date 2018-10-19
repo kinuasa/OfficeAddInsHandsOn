@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script>
+      Office.onReady(function(){
+        //Office is ready
+      });
+      
+      function setValue(){
+        Excel.run(function(context){
+          var range = context.workbook.getActiveCell();
+          range.values = [["TEST"]];
+          return context.sync();
+        }).catch(function(error){
+          console.log("Error: " + error);
+        });
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

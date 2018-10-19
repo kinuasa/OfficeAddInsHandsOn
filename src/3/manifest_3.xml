@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  xsi:type="TaskPaneApp">
+  
+  <Id>{GUID}</Id>
+  <Version>1.0</Version>
+  <ProviderName>{アドイン提供者}</ProviderName>
+  <DefaultLocale>ja-JP</DefaultLocale>
+  <DisplayName DefaultValue="{Office アドインの名前}" />
+  <Description DefaultValue="{Office アドインの説明}" />
+  <IconUrl DefaultValue="https://localhost/OfficeAddInsHandsOn/src/3/img/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://localhost/OfficeAddInsHandsOn/src/3/img/icon-64.png"/>
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost/OfficeAddInsHandsOn/src/3/index.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <!-- アドイン コマンド設定開始 -->
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <!-- ホスト指定 Excel:Workbook, Word:Document, PowerPoint:Presentation -->
+      <Host xsi:type="Workbook">
+        <!-- Formファクター -->
+        <DesktopFormFactor>
+          <!-- 正常にアドインが読み込まれた際に表示可能なメッセージの設定 -->
+          <GetStarted>
+            <!-- メッセージのタイトル。「resid」属性で、ResourcesセクションのShortStrings要素にある有効なIDを参照 -->
+            <Title resid="Contoso.GetStarted.Title" />
+            
+            <!-- メッセージの説明。「resid」属性で、ResourcesセクションのLongStrings要素にある有効なIDを参照 -->
+            <Description resid="Contoso.GetStarted.Description" />
+            
+            <!-- アドインの詳細を説明するページのURL。「resid」属性で、ResourcesセクションのUrls要素にある有効なIDを参照 -->
+            <LearnMoreUrl resid="Contoso.GetStarted.LearnMoreUrl" />
+          </GetStarted>
+          
+          <!-- UIを表示せずに実行するJavaScript関数のソースコードファイルを指定。「resid」属性で、ResourcesセクションのUrls要素にある有効なIDを参照 -->
+          <FunctionFile resid="Contoso.DesktopFunctionFile.Url" />
+          
+          <!-- リボンの拡張。「PrimaryCommandSurface」はOfficeのリボン -->
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <!-- 既定のリボンのタブを拡張。「id」属性で指定する値は【 https://docs.microsoft.com/ja-jp/office/dev/add-ins/reference/manifest/officetab 】参照 -->
+            <OfficeTab id="TabHome">
+              <!-- id属性でグループのIDを一意の値で指定(最大125文字の文字列) -->
+              <Group id="Contoso.Group1">
+                <!-- グループ名。「resid」属性で、ResourcesセクションのShortStrings要素にある有効なIDを参照 -->
+                <Label resid="Contoso.Group1Label" />
+                <!-- ボタンやメニューのアイコンを定義。「resid」属性で、ResourcesセクションのImages要素にある有効なIDを参照 -->
+                <!-- size属性で画像のサイズをピクセル単位で指定。5つのサイズ(20,24,40,48,64ピクセル)がサポートされていますが、3つのサイズ(16,32,80)を必ず指定 -->
+                <!-- PNG形式のアイコンを使用。ResourcesセクションのURLはすべてhttpsを使用する必要があります。 -->
+                <Icon>
+                  <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                  <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                  <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                </Icon>
+                
+                <!-- アクションを実行したり、作業ウィンドウを表示するJavaScript 関数を定義 -->
+                <!-- xsi:type属性で[Button]もしくは[Menu]を指定 -->
+                <!-- id属性でコントロールのIDを一意の値で指定(最大125文字の文字列) -->
+                <Control xsi:type="Button" id="Contoso.TaskpaneButton">
+                  <!-- コントロール名。「resid」属性で、ResourcesセクションのShortStrings要素にある有効なIDを参照 -->
+                  <Label resid="Contoso.TaskpaneButton.Label" />
+                  <!-- コントロールのヒント -->
+                  <Supertip>
+                    <!-- ヒントのタイトル。「resid」属性で、ResourcesセクションのShortStrings要素にある有効なIDを参照 -->
+                    <Title resid="Contoso.TaskpaneButton.Label" />
+                    <!-- ヒントの説明。「resid」属性で、ResourcesセクションのLongStrings要素にある有効なIDを参照 -->
+                    <Description resid="Contoso.TaskpaneButton.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                    <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                    <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                  </Icon>
+                  <!-- ユーザーがボタンやメニューを選択したときに実行する操作を指定 -->
+                  <!-- xsi:type属性で「ShowTaskpane」または「ExecuteFunction」を指定します。 -->
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <!-- xsi:type属性の値が「ShowTaskpane」のときに必ず指定する要素 -->
+                    <!-- この操作のソースコードファイルを指定。「resid」属性で、ResourcesセクションのUrls要素にある有効なIDを参照 -->
+                    <SourceLocation resid="Contoso.Taskpane.Url" />
+                  </Action>
+                </Control>
+                
+                <Control xsi:type="Button" id="Contoso.FunctionButton">
+                  <Label resid="Contoso.FunctionButton.Label" />
+                  <Supertip>
+                    <Title resid="Contoso.FunctionButton.Label" />
+                    <Description resid="Contoso.FunctionButton.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Contoso.tpicon_16x16" />
+                    <bt:Image size="32" resid="Contoso.tpicon_32x32" />
+                    <bt:Image size="80" resid="Contoso.tpicon_80x80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <!-- xsi:type属性の値が「ExecuteFunction」のときに必ず指定する要素 -->
+                    <!-- FunctionFile要素で指定したソースファイルに含まれる、実行する関数名を指定 -->
+                    <FunctionName>setValue</FunctionName>
+                  </Action>
+                </Control>
+                
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <!-- 各リソース設定 -->
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Contoso.tpicon_16x16" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/3/img/icon-16.png" />
+        <bt:Image id="Contoso.tpicon_32x32" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/3/img/icon-32.png" />
+        <bt:Image id="Contoso.tpicon_80x80" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/3/img/icon-80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Contoso.Taskpane.Url" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/3/index.html" />
+        <bt:Url id="Contoso.GetStarted.LearnMoreUrl" DefaultValue="https://docs.microsoft.com/ja-jp/office/dev/add-ins/design/add-in-commands" />
+        <bt:Url id="Contoso.DesktopFunctionFile.Url" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/3/function.html" />
+      </bt:Urls>
+      <!-- ShortStrings：最大125文字 -->
+      <bt:ShortStrings>
+        <bt:String id="Contoso.TaskpaneButton.Label" DefaultValue="作業ウィンドウ表示" />
+        <bt:String id="Contoso.FunctionButton.Label" DefaultValue="関数実行" />
+        <bt:String id="Contoso.Group1Label" DefaultValue="コマンド グループ" />
+        <bt:String id="Contoso.GetStarted.Title" DefaultValue="ようこそ、アドイン コマンドのサンプルへ！" />
+      </bt:ShortStrings>
+      <!-- LongStrings：最大250文字 -->
+      <bt:LongStrings>
+        <bt:String id="Contoso.TaskpaneButton.Tooltip" DefaultValue="クリックすると、作業ウィンドウを表示します。" />
+        <bt:String id="Contoso.FunctionButton.Tooltip" DefaultValue="クリックすると、指定した関数を実行します。" />
+        <bt:String id="Contoso.GetStarted.Description" DefaultValue="アドインの読み込みに成功しました。" />
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <!-- アドイン コマンド設定終了 -->
+
+</OfficeApp>
