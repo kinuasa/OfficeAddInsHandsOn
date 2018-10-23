@@ -1,0 +1,53 @@
+﻿{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/office-js/custom-functions.schema.json",
+  "functions": [
+    {
+      "id": "ADD", //関数のID
+      "name": "ADD", //関数名。マニフェストファイルで指定した名前空間が接頭語として付されます。
+      "description": "2つの数値を足した値を返します。", //関数の説明
+      "helpUrl": "https://www.ka-net.org/", //ヘルプページのURL
+      //関数によって返される情報の種類を定義
+      "result": {
+        "type": "number",
+        "dimensionality": "scalar"
+      },
+      //関数の入力パラメーターを定義
+      "parameters": [
+        {
+          "name": "first",
+          "description": "最初の値",
+          "type": "number",
+          "dimensionality": "scalar"
+        },
+        {
+          "name": "second",
+          "description": "2番目の値",
+          "type": "number",
+          "dimensionality": "scalar"
+        }
+      ]
+    },
+    {
+      "id": "INCREMENT",
+      "name": "INCREMENT",
+      "description": "一定間隔で値が増えていきます。",
+      "helpUrl": "https://www.ka-net.org/",
+      "result": {
+          "type": "number",
+          "dimensionality": "scalar"
+    },
+    "parameters": [
+        {
+            "name": "increment",
+            "description": "増えていく値",
+            "type": "number",
+            "dimensionality": "scalar"
+        }
+    ],
+    "options": {
+        "cancelable": true,
+        "stream": true
+      }
+    }
+  ]
+}
