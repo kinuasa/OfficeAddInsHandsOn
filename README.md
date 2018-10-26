@@ -1,5 +1,9 @@
-﻿# Global Office 365 Developer Bootcamp:Office Add-ins Hands-on
+# Global Office 365 Developer Bootcamp:Office Add-ins Hands-on
 [Global Office 365 Developer Bootcamp 2018(Japan)](https://connpass.com/event/91901/)、「__Office アドイン__」のハンズオン用資料です。
+
+## ハンズオンの目的
+本ハンズオンは、「__Office アドイン__」の概要と開発方法の学習を目的としています。
+ローカル環境で実際にアドインを動かして仕組みを理解し、`Script Lab`で遊んで __“Office アドインでどんなことができるのか”__ を体験してみましょう！
 
 ## ハンズオン環境
 
@@ -42,6 +46,6 @@
 
 <li>SharePointカタログを使ったOffice アドインの発行</li>
 
-> 「[作業ウィンドウ アドインとコンテンツ アドインを SharePoint カタログに発行する](https://docs.microsoft.com/ja-jp/office/dev/add-ins/publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog)」参照
+> ハンズオン資料・第7章参照、および「[作業ウィンドウ アドインとコンテンツ アドインを SharePoint カタログに発行する](https://docs.microsoft.com/ja-jp/office/dev/add-ins/publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog)」参照
 
 </ol>

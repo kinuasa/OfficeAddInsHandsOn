@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+  <Id>{GUID}</Id>
+  <Version>1.0</Version>
+  <ProviderName>{アドイン提供者}</ProviderName>
+  <DefaultLocale>ja-JP</DefaultLocale>
+  <DisplayName DefaultValue="{Office アドインの名前}" />
+  <Description DefaultValue="{Office アドインの説明}" />
+  <IconUrl DefaultValue="https://kinuasa.github.io/OfficeAddInsHandsOn/apps/img/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://kinuasa.github.io/OfficeAddInsHandsOn/apps/img/icon-64.png"/>
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://kinuasa.github.io/OfficeAddInsHandsOn/apps/index.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
