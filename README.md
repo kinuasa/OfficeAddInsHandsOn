@@ -1,5 +1,5 @@
 # Global Office 365 Developer Bootcamp:Office Add-ins Hands-on
-[Global Office 365 Developer Bootcamp 2018(Japan)](https://connpass.com/event/91901/)、「__Office アドイン__」のハンズオン用資料です。
+[Global Office 365 Developer Bootcamp 2018(Japan)](https://connpass.com/event/91901/)、「__Office アドイン__」のハンズオン用資料です。クローン、もしくは[Download ZIP](https://glodia.jp/2017/11/13/2644/)してお使いください。
 
 ## ハンズオンの目的
 本ハンズオンは、「__Office アドイン__」の概要と開発方法の学習を目的としています。
