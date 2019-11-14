@@ -1,34 +1,44 @@
-# Global Office 365 Developer Bootcamp:Office Add-ins Hands-on
-[Global Office 365 Developer Bootcamp 2018(Japan)](https://connpass.com/event/91901/)、「__Office アドイン__」のハンズオン用資料です。クローン、もしくは[Download ZIP](https://glodia.jp/2017/11/13/2644/)してお使いください。
+# Global Microsoft 365 Developer Bootcamp 2019:Office Add-ins Hands-on
+[Global Microsoft 365 Developer Bootcamp 2019 Tokyo](https://connpass.com/event/144707/)、「__Office アドイン__」のハンズオン用資料です。クローン、もしくは[Download ZIP](https://glodia.jp/2017/11/13/2644/)してお使いください。
 
 ## ハンズオンの目的
 本ハンズオンは、「__Office アドイン__」の概要と開発方法の学習を目的としています。
-ローカル環境で実際にアドインを動かして仕組みを理解し、`Script Lab`で遊んで __“Office アドインでどんなことができるのか”__ を体験してみましょう！
+実際にアドインを動かして仕組みを理解し、`Script Lab`で遊んで __“Office アドインでどんなことができるのか”__ を体験してみましょう！
 
 ## ハンズオン環境
 
 |  |  |
 |------|-------------|
 | OS | Windows 10 Pro x64 |
-| Office | Office 365 ProPlus バージョン1803(主にExcel使用) |
+| Office | [Office Online](https://www.office.com/) (Office on the web), Office 365 ProPlus |
 | Server | [XAMPP Portable](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/) |
-| Editor | メモ帳など
+| Editor | メモ帳, [Visual Studio Code](https://code.visualstudio.com/)
 
-## ハンズオン手順
+## ハンズオン内容
 
 <ol>
-<li>Office アドインの概要 (ハンズオン資料・第1章参照)</li>
+<li>Office アドインの概要説明・アドイン紹介 (ハンズオン資料・第1章参照)</li>
 <li>メモ帳とXAMPPを使ったOffice アドイン開発 (ハンズオン資料・第2章参照)</li>
 
 > Excelアドインのテストができたら、マニフェストファイルの`Host`要素を変更して、WordやPowerPointのアドインも試してみましょう。コードは「[最初の Word アドインをビルドする](https://docs.microsoft.com/ja-jp/office/dev/add-ins/quickstarts/word-quickstart?tabs=visual-studio-code)」、「[最初の PowerPoint アドインをビルドする](https://docs.microsoft.com/ja-jp/office/dev/add-ins/quickstarts/powerpoint-quickstart?tabs=visual-studio-code)」参照
 
-<li>アドイン コマンド (ハンズオン資料・第3章参照)</li>
-<li>YO OFFICE!(Yeoman)によるひな形の作成 (ハンズオン資料・第4章参照)</li>
+> 動作確認は[Office Online](https://www.office.com/)で行います。第7章を参考に、マニフェストファイルをアップロードしてみましょう。
+
+<li>Node.js環境構築 (ハンズオン資料・第4章参照)</li>
+
+> [Node.js](https://nodejs.org/ja/)をインストールして、npmからYO OFFICE!(Yeoman)をインストールしてみましょう。インストールコマンドは`npm install -g yo generator-office`です。
+
+<li>Visual Studio Codeを使ったOffice アドイン開発 (ハンズオン資料・第8章参照)</li>
+
+> [Visual Studio Code](https://code.visualstudio.com/)とYO OFFICE!を使ったOffice アドイン開発を体験してみましょう。
+
+> 使用するコマンド：`yo office` , `npm run start:web`
+
 <li>Script Lab (ハンズオン資料・第5章参照)</li>
 
 > `Script Lab`はサンプルコードの動作確認や、自分で書いたコードのテストも簡単に行えます。Excelだけではなく、WordやPowerPointでも遊んで、Office アドインで __“できること”__ を色々と体験してみましょう！
 
-<li>(Insider環境であれば)Excel カスタム関数(Excel Custom Functions) (ハンズオン資料・第6章参照)</li>
+<li>参考書籍紹介 (ハンズオン資料・第11章参照)</li>
 </ol>
 
 ## もっとハンズオン！
@@ -36,9 +46,10 @@
 余裕がある方は、是非下記内容にもチャレンジしてみてください！ :smile:
 
 <ol>
-<li>「Visual Studio Code」によるOffice アドイン開発。</li>
+<li>Excel カスタム関数(Excel Custom Functions)開発</li>
 
-> 「[Office Add-ins with Visual Studio Code](https://code.visualstudio.com/docs/other/office)」参照、TypeScriptの型定義ファイル：[https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js)
+> 「[Excel でカスタム関数を作成する](https://docs.microsoft.com/ja-jp/office/dev/add-ins/excel/custom-functions-overview
+)」参照
 
 <li>Office UI Fabricによる画面設計</li>
 
