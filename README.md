@@ -14,6 +14,12 @@
 | Server | [XAMPP Portable](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/) |
 | Editor | メモ帳, [Visual Studio Code](https://code.visualstudio.com/)
 
+## XAMPPの証明書について
+2019年11月時点で公開されているXAMPPの最新バージョン「__7.3.11__」ではサーバーの証明書の有効期間が2019年11月9日となっており、そのままでは証明書をインポートしても期限切れで使用できません。
+(いずれバージョンアップで証明書も更新されると思いますが)
+
+`(XAMPPのインストールフォルダ)\apache\conf\ssl.crt` にある「__server.crt__」ファイルを本リポジトリのものに置き換えてから、証明書のインポート作業(ハンズオン資料・2.1.2)を行ってください。
+
 ## ハンズオン内容
 
 <ol>
