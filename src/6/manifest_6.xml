@@ -10,7 +10,7 @@
     <Host Name="Workbook" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost/OfficeAddInsHandsOn/src/6/index.html" />
+    <SourceLocation DefaultValue="https://localhost/apps/cf/functions.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -21,30 +21,30 @@
           <ExtensionPoint xsi:type="CustomFunctions">
             <Script>
               <!-- JavaScriptのソースコードファイルを指定。「resid」属性で、ResourcesセクションのUrls要素にある有効なIDを参照 -->
-              <SourceLocation resid="JS-URL" />
+              <SourceLocation resid="Functions.Script.Url" />
             </Script>
             <Page>
               <!-- HTMLファイルを指定。「resid」属性で、ResourcesセクションのUrls要素にある有効なIDを参照 -->
-              <SourceLocation resid="HTML-URL" />
+              <SourceLocation resid="Functions.Page.Url" />
             </Page>
             <Metadata>
               <!-- JSONファイルを指定。「resid」属性で、ResourcesセクションのUrls要素にある有効なIDを参照 -->
-              <SourceLocation resid="JSON-URL" />
+              <SourceLocation resid="Functions.Metadata.Url" />
             </Metadata>
             <!-- 関数の名前の前に追加される名前空間を指定。「resid」属性で、ResourcesセクションのShortStrings要素にある有効なIDを参照 -->
-            <Namespace resid="namespace" />
+            <Namespace resid="Functions.Namespace" />
           </ExtensionPoint>
         </AllFormFactors>
       </Host>
     </Hosts>
     <Resources>
       <bt:Urls>
-        <bt:Url id="JS-URL" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/6/customfunctions.js" />
-        <bt:Url id="HTML-URL" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/6/index.html" />
-        <bt:Url id="JSON-URL" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/6/customfunctions.json" />
+        <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/6/customfunctions.js" />
+        <bt:Url id="Functions.Page.Url" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/6/index.html" />
+        <bt:Url id="Functions.Metadata.Url" DefaultValue="https://localhost/OfficeAddInsHandsOn/src/6/customfunctions.json" />
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="namespace" DefaultValue="CONTOSO" />
+        <bt:String id="Functions.Namespace" DefaultValue="CONTOSO" />
       </bt:ShortStrings>
     </Resources>
   </VersionOverrides>
