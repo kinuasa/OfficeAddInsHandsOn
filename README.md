@@ -23,6 +23,8 @@
 
 ## ハンズオン内容
 
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/wL9GjFKWJb0iti" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/kinuasa/20191123-m365-bootcampoffice-addins-handson" title="Office アドイン ハンズオン" target="_blank">Office アドイン ハンズオン</a> </strong> from <strong><a href="https://www.slideshare.net/kinuasa" target="_blank">kinuasa</a></strong> </div>
+
 <ol>
 <li>Office アドインの概要説明・アドイン紹介 (ハンズオン資料・第1章参照)</li>
 <li>メモ帳とXAMPPを使ったOffice アドイン開発 (ハンズオン資料・第2章参照)</li>
@@ -61,9 +63,13 @@
 
 > 共有フォルダカタログの準備(ハンズオン資料・2.2参照)
 
+<li>アドイン コマンドでリボンカスタマイズ</li>
+
+> ハンズオン資料(3章)や「[Excel、Word、PowerPoint のアドイン コマンド](https://docs.microsoft.com/ja-jp/office/dev/add-ins/design/add-in-commands)」を参考に、リボンをカスタマイズしてみましょう。
+
 <li>Excel カスタム関数(Excel Custom Functions)開発</li>
 
-> 「[Excel でカスタム関数を作成する](https://docs.microsoft.com/ja-jp/office/dev/add-ins/excel/custom-functions-overview
+> ハンズオン資料(6章)、「[Excel でカスタム関数を作成する](https://docs.microsoft.com/ja-jp/office/dev/add-ins/excel/custom-functions-overview
 )」参照
 
 <li>Office UI Fabricによる画面設計</li>
